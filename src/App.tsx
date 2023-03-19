@@ -1,9 +1,9 @@
+import AppRouter from '@app_contexts/navigation/AppRouter'
 import React from 'react'
-import { View } from 'react-native'
 
 const App = () => {
   return (
-    <View></View>
+    <AppRouter />
   )
 }
 
