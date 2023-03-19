@@ -9,8 +9,10 @@ const AppRouter = () => {
    const Stack = createNativeStackNavigator<RootStackParamList>();
    return (
       <NavigationContainer>
-         <Stack.Screen name="SearchScreen" component={SearchScreen} />
-         <Stack.Screen name="PokemonScreen" component={PokemonScreen} />
+         <Stack.Navigator initialRouteName="SearchScreen">
+            <Stack.Screen name="SearchScreen" component={SearchScreen} />
+            <Stack.Screen name="PokemonScreen" component={PokemonScreen} />
+         </Stack.Navigator>
       </NavigationContainer>
    );
 };
