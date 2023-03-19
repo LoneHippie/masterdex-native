@@ -1,6 +1,13 @@
 {
-  "extends": "expo/tsconfig.base",
-  "compilerOptions": {
-    "strict": true
-  }
+   "extends": "expo/tsconfig.base",
+   "compilerOptions": {
+      "strict": true,
+      "baseUrl": ".",
+      "paths": {
+         "@app_tools/*": ["src/tools/*"],
+         "@app_contexts/*": ["src/contexts/*"],
+         "@app_interfaces/*": ["src/interfaces/*"],
+         "@app_screens/*": ["src/screens/*"]
+      }
+   }
 }
