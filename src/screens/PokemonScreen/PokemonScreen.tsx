@@ -1,10 +1,23 @@
-import React from 'react'
-import { Text, View } from 'react-native'
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import { Text, View } from 'react-native';
+import Layout from '~app_tools/components/Layout';
 
 const PokemonScreen = () => {
-  return (
-    <View><Text>Pokemon screen</Text></View>
-  )
-}
+   return (
+      <Layout>
+         <View>
+            <Text style={styles.container}>Pokemon screen</Text>
+         </View>
+      </Layout>
+   );
+};
 
-export default PokemonScreen
+const styles = StyleSheet.create({
+   container: {
+      paddingLeft: 2,
+      paddingRight: 2
+   }
+});
+
+export default PokemonScreen;

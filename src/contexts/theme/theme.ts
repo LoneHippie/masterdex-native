@@ -1,4 +1,33 @@
-export const theme = {
+export interface Theme {
+   palette: {
+      types: {
+         fire: string;
+         water: string;
+         electric: string;
+         grass: string;
+         ice: string;
+         fighting: string;
+         poison: string;
+         ground: string;
+         flying: string;
+         psychic: string;
+         bug: string;
+         rock: string;
+         ghost: string;
+         dragon: string;
+         dark: string;
+         steel: string;
+         fairy: string;
+      };
+      common: {
+         white: string;
+         black: string;
+      };
+      test: string;
+   };
+}
+
+export const theme: Theme = {
    palette: {
       types: {
          fire: '#EE8130',
@@ -22,6 +51,7 @@ export const theme = {
       common: {
          white: '#FFFFFF',
          black: '#000000'
-      }
+      },
+      test: '#123456'
    }
 };

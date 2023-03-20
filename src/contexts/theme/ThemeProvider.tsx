@@ -1,6 +1,5 @@
 import React, { createContext } from 'react';
 import { useContext } from 'react';
-import { StyleProp } from 'react-native/types';
 import { theme } from './theme';
 
 const ThemeContext = createContext<typeof theme>(theme);
@@ -21,7 +20,7 @@ const useTheme = () => {
    return context;
 };
 
-const useThemedStyles = (styles: StyleProp<any>) => {
+const useThemedStyles = (styles: any) => {
    const theme = useTheme();
    return styles(theme);
 };
