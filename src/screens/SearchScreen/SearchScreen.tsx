@@ -1,10 +1,17 @@
-import React from 'react'
-import { Text, View } from 'react-native'
+import { getPokemonNames } from '~app_contexts/api/pokeapi';
+import React from 'react';
+import { useEffect } from 'react';
+import { Text, View } from 'react-native';
 
 const SearchScreen = () => {
-  return (
-    <View><Text>Search</Text></View>
-  )
-}
+   useEffect(() => {
+      getPokemonNames();
+   }, []);
+   return (
+      <View>
+         <Text>Search</Text>
+      </View>
+   );
+};
 
-export default SearchScreen
+export default SearchScreen;

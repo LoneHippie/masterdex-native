@@ -4,10 +4,12 @@
       "strict": true,
       "baseUrl": ".",
       "paths": {
-         "@app_tools/*": ["src/tools/*"],
-         "@app_contexts/*": ["src/contexts/*"],
-         "@app_interfaces/*": ["src/interfaces/*"],
-         "@app_screens/*": ["src/screens/*"]
+         "~app_tools/*": ["./src/tools/*"],
+         "~app_contexts/*": ["./src/contexts/*"],
+         "~app_interfaces/*": ["./src/interfaces/*"],
+         "~app_screens/*": ["./src/screens/*"]
       }
-   }
+   },
+   "include": ["./src/**/*", "./App.tsx", "./src/**/*", "src/**/*", "src/**/*.*"],
+   "exclude": ["node_modules", "babel.config.js"]
 }
