@@ -1,6 +1,8 @@
+import { TypeString } from './TypeStrings';
+
 export interface PokemonType {
    type: {
-      name: string;
+      name: TypeString;
       id: number;
    };
 }

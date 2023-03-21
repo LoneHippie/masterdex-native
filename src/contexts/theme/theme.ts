@@ -18,12 +18,27 @@ export interface Theme {
          dark: string;
          steel: string;
          fairy: string;
+         normal: string;
+      };
+      primary: {
+         main: string;
+         dark: string;
+      };
+      secondary: {
+         main: string;
+      };
+      background: {
+         main: string;
       };
       common: {
          white: string;
          black: string;
       };
-      test: string;
+      contrasts: {
+         light: string;
+         dark: string;
+      };
+      focus: string;
    };
 }
 
@@ -46,12 +61,27 @@ export const theme: Theme = {
          dragon: '#6F35FC',
          dark: '#705746',
          steel: '#B7B7CE',
-         fairy: '#D685AD'
+         fairy: '#D685AD',
+         normal: '#A9A9A9'
+      },
+      primary: {
+         main: '#FF0000',
+         dark: '#E01414'
+      },
+      secondary: {
+         main: '#2F4F4F'
+      },
+      background: {
+         main: '#DCDCDC'
       },
       common: {
          white: '#FFFFFF',
          black: '#000000'
       },
-      test: '#123456'
+      contrasts: {
+         light: '#DCDCDC',
+         dark: '#2F4F4F4F'
+      },
+      focus: '#2cfc2c'
    }
 };
