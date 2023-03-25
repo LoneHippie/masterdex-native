@@ -32,6 +32,18 @@ const pokemon_v2 = `
         }
     `;
 
+export function getAllPokemon() {
+   const query = `
+        query {
+            ${pokeapiNamespace}: pokemon_v2_pokemon(where: ${filters.standardVariantsOnly}) {
+                ${pokemon_v2}
+            }
+        }
+    `;
+
+   return pokeapiQuery<Pokemon[]>(queryOptions(query));
+}
+
 export function getPokemonByName(search: string) {
    const searchQuery = `
         query {

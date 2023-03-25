@@ -22,12 +22,19 @@ const FullScreenLoader = ({ isLoading }: Props) => {
 const useStyles = (theme: Theme) =>
    StyleSheet.create({
       container: {
-         flex: 1,
+         position: 'absolute',
+         top: 0,
+         left: 0,
+         right: 0,
+         bottom: 0,
+         height: '100%',
          width: '100%',
+         flex: 1,
          justifyContent: 'center',
          alignItems: 'center',
-         color: theme.palette.common.white,
-         opacity: 0.6
+         backgroundColor: theme.palette.common.white,
+         opacity: 0.6,
+         zIndex: 100000
       }
    });
 

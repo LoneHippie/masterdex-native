@@ -37,7 +37,6 @@ export interface Pokemon {
    stats: Stat[];
    types: PokemonType[];
    weight: number;
-   sprite?: string;
    specs: Specs;
    moves: Move[];
 }

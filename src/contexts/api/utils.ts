@@ -20,7 +20,7 @@ export const queryOptions = (query: string) => {
    };
 };
 
-export async function pokeapiQuery<T>(options: Object): Promise<T | void> {
+export async function pokeapiQuery<T>(options: Object): Promise<T> {
    const handleResponse = (res: any) => {
       return res.json().then((resJSON: JSON) => {
          return res.ok ? resJSON : Promise.reject(resJSON);
@@ -29,11 +29,8 @@ export async function pokeapiQuery<T>(options: Object): Promise<T | void> {
    const handleData = (data: any): T => {
       return data.data[pokeapiNamespace];
    };
-   const handleError = (err: Error): void => {
-      console.log(err);
-   };
 
-   const pokeData = fetch(url, options).then(handleResponse).then(handleData).catch(handleError);
+   const pokeData = fetch(url, options).then(handleResponse).then(handleData);
 
    return pokeData;
 }

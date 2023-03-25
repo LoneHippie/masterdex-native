@@ -3,7 +3,6 @@ import { StyleSheet } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { Theme } from '~app_contexts/theme/theme';
 import { useTheme } from '~app_contexts/theme/ThemeProvider';
-import FullScreenLoader from '../FullScreenLoader';
 
 interface Props {
    children: React.ReactNode;
@@ -15,9 +14,7 @@ const Layout = ({ children }: Props) => {
 
    return (
       <SafeAreaProvider>
-         <SafeAreaView style={styles.container}>
-            {children}
-         </SafeAreaView>
+         <SafeAreaView style={styles.container}>{children}</SafeAreaView>
       </SafeAreaProvider>
    );
 };
