@@ -1,15 +1,15 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { Text, View } from 'react-native';
-import Layout from '~app_tools/components/Layout';
+import StandardLayout from '~app_tools/components/layouts/StandardLayout';
 
 const PokemonScreen = () => {
    return (
-      <Layout>
+      <StandardLayout>
          <View>
             <Text style={styles.container}>Pokemon screen</Text>
          </View>
-      </Layout>
+      </StandardLayout>
    );
 };
 

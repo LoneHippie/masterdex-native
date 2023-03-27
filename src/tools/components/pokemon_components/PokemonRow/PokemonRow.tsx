@@ -1,10 +1,10 @@
 import React from 'react';
-import { Image, StyleProp, StyleSheet, Text, View, ViewStyle, Button } from 'react-native';
+import { Image, StyleProp, Text, View, ViewStyle, Button } from 'react-native';
 import { Theme } from '~app_contexts/theme/theme';
 import { useTheme } from '~app_contexts/theme/ThemeProvider';
 import { useTypeStyles } from '~app_contexts/theme/utils';
 import { Pokemon } from '~app_interfaces/Pokemon';
-import TypeIcon from '~app_tools/components/Icons';
+import TypeIcon from '~app_tools/components/icons';
 import PokemonSprite from '../PokemonSprite';
 import useStylesPokemonRow from './useStylesPokemonRow';
 

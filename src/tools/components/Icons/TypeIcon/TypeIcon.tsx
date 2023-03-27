@@ -18,41 +18,41 @@ const TypeIcon = ({ type, style }: Props) => {
    const Icon = React.lazy(() => {
       switch (type) {
          case 'bug':
-            return import('./Icons/IconBug');
+            return import('./icons/IconBug');
          case 'dark':
-            return import('./Icons/IconDark');
+            return import('./icons/IconDark');
          case 'dragon':
-            return import('./Icons/IconDragon');
+            return import('./icons/IconDragon');
          case 'electric':
-            return import('./Icons/IconElectric');
+            return import('./icons/IconElectric');
          case 'fairy':
-            return import('./Icons/IconFairy');
+            return import('./icons/IconFairy');
          case 'fighting':
-            return import('./Icons/IconFighting');
+            return import('./icons/IconFighting');
          case 'fire':
-            return import('./Icons/IconFire');
+            return import('./icons/IconFire');
          case 'flying':
-            return import('./Icons/IconFlying');
+            return import('./icons/IconFlying');
          case 'ghost':
-            return import('./Icons/IconGhost');
+            return import('./icons/IconGhost');
          case 'grass':
-            return import('./Icons/IconGrass');
+            return import('./icons/IconGrass');
          case 'ground':
-            return import('./Icons/IconGround');
+            return import('./icons/IconGround');
          case 'ice':
-            return import('./Icons/IconIce');
+            return import('./icons/IconIce');
          case 'normal':
-            return import('./Icons/IconNormal');
+            return import('./icons/IconNormal');
          case 'poison':
-            return import('./Icons/IconPoison');
+            return import('./icons/IconPoison');
          case 'psychic':
-            return import('./Icons/IconPsychic');
+            return import('./icons/IconPsychic');
          case 'rock':
-            return import('./Icons/IconRock');
+            return import('./icons/IconRock');
          case 'steel':
-            return import('./Icons/IconSteel');
+            return import('./icons/IconSteel');
          case 'water':
-            return import('./Icons/IconWater');
+            return import('./icons/IconWater');
       }
    });
 

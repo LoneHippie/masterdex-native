@@ -1,11 +1,11 @@
 import React from 'react';
 import { FlatList, Text, View, Image } from 'react-native';
-import Layout from '~app_tools/components/Layout';
+import StandardLayout from '~app_tools/components/layouts/StandardLayout';
 import useSearchScreen from './useSearchScreen';
 import { StyleSheet } from 'react-native';
 import { Theme } from '~app_contexts/theme/theme';
 import { useTheme } from '~app_contexts/theme/ThemeProvider';
-import { PokemonRow } from '~app_tools/components/PokemonComponents';
+import { PokemonRow } from '~app_tools/components/pokemon_components';
 
 const SearchScreen = () => {
    const theme = useTheme();
@@ -14,13 +14,13 @@ const SearchScreen = () => {
    const { allPokemon } = useSearchScreen();
 
    return (
-      <Layout>
+      <StandardLayout>
          <FlatList
             data={allPokemon}
             renderItem={({ item }) => <PokemonRow pokemon={item} style={styles.row} />}
             keyExtractor={(item) => item.id.toString()}
          />
-      </Layout>
+      </StandardLayout>
    );
 };
 

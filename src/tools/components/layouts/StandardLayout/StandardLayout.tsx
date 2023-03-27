@@ -8,7 +8,7 @@ interface Props {
    children: React.ReactNode;
 }
 
-const Layout = ({ children }: Props) => {
+const StandardLayout = ({ children }: Props) => {
    const theme = useTheme();
    const styles = useStyles(theme);
 
@@ -29,4 +29,4 @@ const useStyles = (theme: Theme) =>
       }
    });
 
-export default Layout;
+export default StandardLayout;

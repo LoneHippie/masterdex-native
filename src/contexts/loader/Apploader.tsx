@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import FullScreenLoader from '~app_tools/components/FullScreenLoader';
+import FullScreenLoader from '~app_tools/components/loaders/FullScreenLoader';
 import { selectLoader } from './loaderSlice';
 
 const Apploader = () => {
