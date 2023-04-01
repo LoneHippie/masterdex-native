@@ -1,12 +1,13 @@
 import React from 'react';
-import SVG, { Path } from 'react-native-svg';
+import { Path } from 'react-native-svg';
+import StandardizedIcon from '../../utils/StandardizedIcon';
 import { IconProps } from '../types';
 import useIconColor from '../useIconColor';
 
 const IconIce = ({ style, iconColor }: IconProps) => {
    const { fillColor } = useIconColor({ iconColor });
    return (
-      <SVG width="24" height="24" viewBox="0 0 24 24" fill="none" style={style}>
+      <StandardizedIcon style={style}>
          <Path
             fillRule="evenodd"
             clipRule="evenodd"
@@ -43,7 +44,7 @@ const IconIce = ({ style, iconColor }: IconProps) => {
             d="M7.51854 19.6911L7.46313 14.8273L11.7055 12.7908L11.7578 17.3832L7.51854 19.6911Z"
             fill={fillColor}
          />
-      </SVG>
+      </StandardizedIcon>
    );
 };
 

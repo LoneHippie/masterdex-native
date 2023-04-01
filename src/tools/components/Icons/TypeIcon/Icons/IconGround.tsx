@@ -1,12 +1,13 @@
 import React from 'react';
-import SVG, { G, Path, Defs, ClipPath, Rect } from 'react-native-svg';
+import { G, Path, Defs, ClipPath, Rect } from 'react-native-svg';
+import StandardizedIcon from '../../utils/StandardizedIcon';
 import { IconProps } from '../types';
 import useIconColor from '../useIconColor';
 
 const IconGround = ({ style, iconColor }: IconProps) => {
    const { fillColor } = useIconColor({ iconColor });
    return (
-      <SVG width="24" height="24" viewBox="0 0 24 24" fill="none" style={style}>
+      <StandardizedIcon style={style}>
          <G clipPath="url(#clip0_2_22)">
             <Path
                fillRule="evenodd"
@@ -20,7 +21,7 @@ const IconGround = ({ style, iconColor }: IconProps) => {
                <Rect width="18" height="18" fill={fillColor} transform="translate(3 3)" />
             </ClipPath>
          </Defs>
-      </SVG>
+      </StandardizedIcon>
    );
 };
 

@@ -5,6 +5,7 @@ import { useTheme } from '~app_contexts/theme/ThemeProvider';
 import { useTypeStyles } from '~app_contexts/theme/utils';
 import { Pokemon } from '~app_interfaces/Pokemon';
 import TypeIcon from '~app_tools/components/icons';
+import IconBug from '~app_tools/components/Icons/TypeIcon/icons/IconBug';
 import PokemonSprite from '../PokemonSprite';
 import useStylesPokemonRow from './useStylesPokemonRow';
 

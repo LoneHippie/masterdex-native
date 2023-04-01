@@ -14,7 +14,7 @@ const useSearchScreen = () => {
 
       getAllPokemon()
          .then((pokemon) => {
-            pokemon.length = 50;
+            pokemon.length = 101;
             setAllPokemon(pokemon);
          })
          .catch((error) => console.log(error))

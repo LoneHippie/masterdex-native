@@ -80,7 +80,7 @@ export const theme: Theme = {
       },
       contrasts: {
          light: '#DCDCDC',
-         dark: '#2F4F4F4F'
+         dark: '#2F4F4F' //can add another 4F to get previous color
       },
       focus: '#2cfc2c'
    }

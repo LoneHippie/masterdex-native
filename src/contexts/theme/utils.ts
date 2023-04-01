@@ -1,10 +1,21 @@
 import { Pokemon } from '~app_interfaces/Pokemon';
 import { PokemonType } from '~app_interfaces/PokemonType';
-import { DarkPaletteType, TypeString } from '~app_interfaces/TypeStrings';
+import { TypeString } from '~app_interfaces/TypeStrings';
 import { theme } from './theme';
 
-const isDarkPalette = (type: TypeString): type is DarkPaletteType => {
-   return [type].indexOf(type) !== -1;
+const darkPaletteTypes = [
+   'grass',
+   'water',
+   'poison',
+   'fighting',
+   'dragon',
+   'dark',
+   'ghost',
+   'psychic'
+];
+
+const isDarkPalette = (type: TypeString) => {
+   return darkPaletteTypes.includes(type);
 };
 
 export const useTypeStyles = (type: TypeString) => {
