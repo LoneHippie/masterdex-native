@@ -1,8 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, View, StatusBar, Platform } from 'react-native';
+import { StyleSheet, Text, View, StatusBar } from 'react-native';
 import { Theme } from '~app_contexts/theme/theme';
 import { useTheme } from '~app_contexts/theme/ThemeProvider';
 import Selector from '~app_tools/components/inputs/Selector';
+import useSearchHeader from './useSearchHeader';
 
 const SearchHeader = () => {
    const theme = useTheme();
@@ -11,20 +12,26 @@ const SearchHeader = () => {
    StatusBar.setBackgroundColor(theme.palette.common.white);
    StatusBar.setBarStyle('dark-content');
 
-   const options = [
-      { key: 'Gen 1', value: 'gen 1' },
-      { key: 'Gen 2', value: 'gen 2' },
-      { key: 'Gen 3', value: 'gen 3' }
-   ];
+   const { handleChangeGen, handleChangeType, genOptions, typeOptions } = useSearchHeader();
 
    return (
       <View style={styles.container}>
-         <Text>TEST</Text>
-         <Selector
-            defaultText="SELECT ME"
-            onChangeValue={(value) => alert(value)}
-            options={options}
-         />
+         <View style={styles.contentTop}>
+            <Text style={styles.title}>Pokedex</Text>
+            <Text>2023</Text>
+         </View>
+         <View style={styles.contentBottom}>
+            <Selector
+               defaultText={'Select Gen'}
+               onChangeValue={handleChangeGen}
+               options={genOptions}
+            />
+            <Selector
+               defaultText={'Select Type'}
+               onChangeValue={handleChangeType}
+               options={typeOptions}
+            />
+         </View>
       </View>
    );
 };
@@ -35,16 +42,28 @@ const useStyles = (theme: Theme) =>
          alignSelf: 'stretch',
          width: '100%',
          backgroundColor: theme.palette.common.white,
-         paddingTop: StatusBar.currentHeight,
+         paddingTop: StatusBar.currentHeight ? StatusBar.currentHeight + 5 : 10,
          paddingLeft: 16,
          paddingRight: 16,
          paddingBottom: 5,
          display: 'flex',
          flexDirection: 'column'
       },
-      content: {
-         flex: 1,
-         width: '100%'
+      contentTop: {
+         display: 'flex',
+         flexDirection: 'row',
+         alignSelf: 'stretch',
+         justifyContent: 'space-between',
+         marginBottom: 10
+      },
+      title: {
+         fontSize: 16,
+         color: theme.palette.secondary.main
+      },
+      contentBottom: {
+         display: 'flex',
+         flexDirection: 'row',
+         alignSelf: 'stretch'
       }
    });
 

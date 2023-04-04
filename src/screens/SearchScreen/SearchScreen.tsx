@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, Text, View, Image } from 'react-native';
+import { FlatList } from 'react-native';
 import StandardLayout from '~app_tools/components/layouts/StandardLayout';
 import useSearchScreen from './useSearchScreen';
 import { StyleSheet } from 'react-native';
@@ -11,12 +11,12 @@ const SearchScreen = () => {
    const theme = useTheme();
    const styles = useStyles(theme);
 
-   const { allPokemon } = useSearchScreen();
+   const { filteredPokemon } = useSearchScreen();
 
    return (
       <StandardLayout>
          <FlatList
-            data={allPokemon}
+            data={filteredPokemon}
             renderItem={({ item }) => <PokemonRow pokemon={item} style={styles.row} />}
             keyExtractor={(item) => item.id.toString()}
          />
