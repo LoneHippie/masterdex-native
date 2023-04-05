@@ -15,12 +15,13 @@ import { IconSearch } from '~app_tools/components/icons/general';
 
 interface Props {
    value: string;
+   placeholderText?: string;
    onChange: Dispatch<SetStateAction<string>>;
    onSubmit: (value: string) => void;
    style?: StyleProp<ViewStyle>;
 }
 
-const SearchInput = ({ value, onChange, onSubmit, style }: Props) => {
+const SearchInput = ({ value, placeholderText, onChange, onSubmit, style }: Props) => {
    const theme = useTheme();
    const styles = useStyles(theme);
 
@@ -45,6 +46,8 @@ const SearchInput = ({ value, onChange, onSubmit, style }: Props) => {
             value={value}
             onChangeText={onChange}
             onSubmitEditing={handleSubmit}
+            placeholder={placeholderText}
+            placeholderTextColor={theme.palette.contrasts.dark}
             autoFocus
             blurOnSubmit
          />

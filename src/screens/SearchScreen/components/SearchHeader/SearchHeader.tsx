@@ -27,6 +27,7 @@ const SearchHeader = () => {
                selectedValue={selectedGen}
                onChangeValue={handleChangeGen}
                options={genOptions}
+               style={styles.filterButton}
             />
             <Selector
                defaultText={'Select Type'}
@@ -48,7 +49,7 @@ const useStyles = (theme: Theme) =>
          paddingTop: StatusBar.currentHeight ? StatusBar.currentHeight + 5 : 10,
          paddingLeft: 16,
          paddingRight: 16,
-         paddingBottom: 5,
+         paddingBottom: 8,
          display: 'flex',
          flexDirection: 'column'
       },
@@ -61,12 +62,16 @@ const useStyles = (theme: Theme) =>
       },
       title: {
          fontSize: 16,
+         fontWeight: '700',
          color: theme.palette.secondary.main
       },
       contentBottom: {
          display: 'flex',
          flexDirection: 'row',
          alignSelf: 'stretch'
+      },
+      filterButton: {
+         marginRight: 8
       }
    });
 

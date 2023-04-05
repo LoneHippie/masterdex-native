@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Pressable, StyleSheet, View, Text, StyleProp, TextStyle } from 'react-native';
+import { Pressable, StyleSheet, View, Text, StyleProp, TextStyle, ViewStyle } from 'react-native';
 import { Theme } from '~app_contexts/theme/theme';
 import { useTheme } from '~app_contexts/theme/ThemeProvider';
 import StrokeButton from '~app_tools/components/buttons/StrokeButton';
@@ -16,9 +16,10 @@ interface Props<T> {
    selectedValue: T;
    onChangeValue: (value: T) => void;
    defaultText: string;
+   style?: StyleProp<ViewStyle>;
 }
 
-function Selector<T>({ options, selectedValue, onChangeValue, defaultText }: Props<T>) {
+function Selector<T>({ options, selectedValue, onChangeValue, defaultText, style }: Props<T>) {
    const theme = useTheme();
    const styles = useStyles(theme);
 
@@ -49,6 +50,7 @@ function Selector<T>({ options, selectedValue, onChangeValue, defaultText }: Pro
             color={theme.palette.secondary.main}
             text={selectorText}
             onPress={setTrueIsOpenDialog}
+            style={style}
          />
 
          <BaseDialog isOpen={isOpenDialog} onClose={setFalseIsOpenDialog}>

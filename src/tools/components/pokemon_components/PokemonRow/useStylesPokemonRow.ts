@@ -15,7 +15,8 @@ const useStylesPokemonRow = ({ theme, backgroundColor, color }: StyleProps) =>
          flexDirection: 'row',
          alignSelf: 'stretch',
          borderRadius: 8,
-         padding: 6
+         padding: 6,
+         paddingLeft: 10
       },
       info: {
          display: 'flex',
@@ -41,13 +42,26 @@ const useStylesPokemonRow = ({ theme, backgroundColor, color }: StyleProps) =>
          marginLeft: 4
       },
       infoBottom: {
-         alignSelf: 'stretch'
+         alignSelf: 'stretch',
+         display: 'flex',
+         flexDirection: 'row',
+         justifyContent: 'space-between'
+      },
+      addCatchListButton: {
+         height: 30,
+         width: 30,
+         display: 'flex',
+         alignItems: 'center',
+         justifyContent: 'center',
+         backgroundColor: color,
+         borderRadius: 200
       },
       bodyText: {
          color: color,
          fontSize: 14,
          letterSpacing: 0.5,
-         lineHeight: 28
+         lineHeight: 28,
+         fontWeight: '500'
       },
       title: {
          textTransform: 'capitalize',

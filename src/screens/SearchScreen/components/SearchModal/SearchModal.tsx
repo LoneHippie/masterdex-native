@@ -32,7 +32,12 @@ const SearchModal = ({ onSubmitSearch }: Props) => {
             <IconSearch iconColor={theme.palette.common.white} />
          </TouchableOpacity>
          <BaseDialog isOpen={isOpenDialog} onClose={setFalseIsOpenDialog}>
-            <SearchInput value={text} onChange={setText} onSubmit={handleSubmitSearch} />
+            <SearchInput
+               placeholderText={'Search by name...'}
+               value={text}
+               onChange={setText}
+               onSubmit={handleSubmitSearch}
+            />
          </BaseDialog>
       </>
    );

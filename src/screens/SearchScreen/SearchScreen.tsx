@@ -17,6 +17,7 @@ const SearchScreen = () => {
    return (
       <StandardLayout>
          <FlatList
+            style={styles.pokemonRows}
             data={filteredPokemon}
             renderItem={({ item }) => <PokemonRow pokemon={item} style={styles.row} />}
             keyExtractor={(item) => item.id.toString()}
@@ -30,6 +31,9 @@ const useStyles = (theme: Theme) =>
    StyleSheet.create({
       row: {
          marginBottom: 8
+      },
+      pokemonRows: {
+         marginTop: 8
       }
    });
 

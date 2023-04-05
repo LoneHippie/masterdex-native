@@ -1,22 +1,23 @@
 import React, { useMemo } from 'react';
-import { Pressable, StyleSheet, Text } from 'react-native';
+import { Pressable, StyleProp, StyleSheet, Text, ViewStyle } from 'react-native';
 import { Theme } from '~app_contexts/theme/theme';
 import { useTheme } from '~app_contexts/theme/ThemeProvider';
 
 interface Props {
    color?: string;
+   style?: StyleProp<ViewStyle>;
    text: string;
    onPress: () => void;
 }
 
-const StrokeButton = ({ color, text, onPress }: Props) => {
+const StrokeButton = ({ color, style, text, onPress }: Props) => {
    const theme = useTheme();
    const buttonColor = useMemo(() => (color ? color : theme.palette.secondary.main), [color]);
 
    const styles = useStyles({ theme: theme, color: buttonColor });
 
    return (
-      <Pressable style={styles.container} onPress={onPress}>
+      <Pressable style={[style, styles.container]} onPress={onPress}>
          <Text style={styles.text}>{text}</Text>
       </Pressable>
    );
