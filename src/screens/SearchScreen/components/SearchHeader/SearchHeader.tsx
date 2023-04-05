@@ -12,7 +12,8 @@ const SearchHeader = () => {
    StatusBar.setBackgroundColor(theme.palette.common.white);
    StatusBar.setBarStyle('dark-content');
 
-   const { handleChangeGen, handleChangeType, genOptions, typeOptions } = useSearchHeader();
+   const { handleChangeGen, handleChangeType, genOptions, typeOptions, selectedGen, selectedType } =
+      useSearchHeader();
 
    return (
       <View style={styles.container}>
@@ -23,11 +24,13 @@ const SearchHeader = () => {
          <View style={styles.contentBottom}>
             <Selector
                defaultText={'Select Gen'}
+               selectedValue={selectedGen}
                onChangeValue={handleChangeGen}
                options={genOptions}
             />
             <Selector
                defaultText={'Select Type'}
+               selectedValue={selectedType}
                onChangeValue={handleChangeType}
                options={typeOptions}
             />

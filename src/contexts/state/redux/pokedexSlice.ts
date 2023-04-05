@@ -6,11 +6,13 @@ import { RootState } from './store';
 interface PokedexState {
    genFilter?: Gen;
    typeFilter?: TypeString;
+   nameFilter?: string;
 }
 
 const initalPokedexSlice: PokedexState = {
    genFilter: undefined,
-   typeFilter: undefined
+   typeFilter: undefined,
+   nameFilter: undefined
 };
 
 export const PokedexSlice = createSlice({
