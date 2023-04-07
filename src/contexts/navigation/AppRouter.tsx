@@ -1,22 +1,25 @@
 import React from 'react';
-import PokemonScreen from '~app_screens/PokemonScreen';
-import SearchScreen from '~app_screens/SearchScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { RootStackParamList } from './types';
-import SearchHeader from '~app_screens/SearchScreen/components/SearchHeader';
+import PokemonRouter from '~app_sections/Pokemon/navigation/PokemonRouter';
+import PokedexRouter from '~app_sections/Pokedex/navigation/PokedexRouter';
 
 const AppRouter = () => {
    const Stack = createNativeStackNavigator<RootStackParamList>();
    return (
       <NavigationContainer>
-         <Stack.Navigator initialRouteName="SearchScreen">
+         <Stack.Navigator initialRouteName="PokedexRouterStack">
             <Stack.Screen
-               name="SearchScreen"
-               component={SearchScreen}
-               options={{ header: () => <SearchHeader /> }}
+               name="PokedexRouterStack"
+               component={PokedexRouter}
+               options={{ header: () => <></> }}
             />
-            <Stack.Screen name="PokemonScreen" component={PokemonScreen} />
+            <Stack.Screen
+               name="PokemonRouterStack"
+               component={PokemonRouter}
+               options={{ header: () => <></> }}
+            />
          </Stack.Navigator>
       </NavigationContainer>
    );

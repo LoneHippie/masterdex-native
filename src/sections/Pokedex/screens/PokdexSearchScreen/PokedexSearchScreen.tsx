@@ -1,18 +1,18 @@
 import React from 'react';
 import { FlatList } from 'react-native';
 import StandardLayout from '~app_tools/components/layouts/StandardLayout';
-import useSearchScreen from './useSearchScreen';
 import { StyleSheet } from 'react-native';
 import { Theme } from '~app_contexts/theme/theme';
 import { useTheme } from '~app_contexts/theme/ThemeProvider';
 import { PokemonRow } from '~app_tools/components/pokemon_components';
 import SearchModal from './components/SearchModal';
+import usePokedexSearchScreen from './usePokedexSearchScreen';
 
-const SearchScreen = () => {
+const PokedexSearchScreen = () => {
    const theme = useTheme();
    const styles = useStyles(theme);
 
-   const { filteredPokemon, handleSubmitPokemonSearch } = useSearchScreen();
+   const { filteredPokemon, handleSubmitPokemonSearch } = usePokedexSearchScreen();
 
    return (
       <StandardLayout>
@@ -37,4 +37,4 @@ const useStyles = (theme: Theme) =>
       }
    });
 
-export default SearchScreen;
+export default PokedexSearchScreen;

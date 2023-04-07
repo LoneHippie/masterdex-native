@@ -7,7 +7,7 @@ import { selectPokdexFilters, setPokedexFilters } from '~app_contexts/state/redu
 import { selectPokemon, setPokemon } from '~app_contexts/state/redux/pokemonSlice';
 import { Pokemon } from '~app_interfaces/Pokemon';
 
-const useSearchScreen = () => {
+const usePokedexSearchScreen = () => {
    const dispatch = useDispatch();
    const pokemon = useSelector(selectPokemon);
    const { genFilter, typeFilter, nameFilter } = useSelector(selectPokdexFilters);
@@ -64,4 +64,4 @@ const useSearchScreen = () => {
    };
 };
 
-export default useSearchScreen;
+export default usePokedexSearchScreen;

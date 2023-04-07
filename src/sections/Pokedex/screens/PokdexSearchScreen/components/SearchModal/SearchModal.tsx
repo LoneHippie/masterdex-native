@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, TouchableOpacity } from 'react-native';
 import { Theme } from '~app_contexts/theme/theme';
 import { useTheme } from '~app_contexts/theme/ThemeProvider';
 import BaseDialog from '~app_tools/components/dialogs/BaseDialog';

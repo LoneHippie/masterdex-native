@@ -21,7 +21,7 @@ module.exports = function (api) {
                   '~app_tools': ['./src/tools'],
                   '~app_contexts': ['./src/contexts'],
                   '~app_interfaces': ['./src/interfaces'],
-                  '~app_screens': ['./src/screens']
+                  '~app_sections': ['./src/sections']
                }
             }
          ],
